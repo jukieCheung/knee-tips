@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>膝关节小Tips</title>
+  <style>
+    :root{
+      --bg:#cdb6c8;        /* 外层紫粉底（像PDF边框） */
+      --paper:#f7f0e8;     /* 内层纸张底色 */
+      --ink:#1b1b1b;
+      --muted:#4a4a4a;
+      --card:#efe2d2;      /* 模块卡片底色 */
+      --radius:22px;
+      --shadow: 0 18px 50px rgba(0,0,0,.18);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", Arial;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    .page{
+      max-width: 440px;           /* 竖海报宽度 */
+      margin: 18px auto 36px;
+      padding: 14px;
+    }
+    .paper{
+      background: var(--paper);
+      border-radius: calc(var(--radius) + 10px);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      border: 6px solid rgba(0,0,0,.12);   /* 类似PDF外框 */
+    }
+    .top{
+      text-align:center;
+      padding: 10px 10px 18px;
+    }
+    .kicker{
+      font-size: 14px;
+      color: var(--muted);
+      letter-spacing: .5px;
+    }
+    h1{
+      margin: 8px 0 10px;
+      font-size: 26px;
+      line-height: 1.2;
+    }
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 14.5px;
+      line-height: 1.65;
+    }
+    .divider{
+      height: 2px;
+      background: rgba(0,0,0,.18);
+      border-radius: 999px;
+      margin: 14px auto;
+      width: 62%;
+    }
+
+    /* 模块卡片（像PDF里一个个块） */
+    .block{
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 14px;
+      margin: 12px 0;
+      border: 1px solid rgba(0,0,0,.10);
+    }
+    .block h2{
+      margin: 0 0 6px;
+      font-size: 16px;
+      letter-spacing: .2px;
+    }
+    .block p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    /* 视频区：明显“留给视频”的窗口 */
+    .videoShell{
+      margin: 12px 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #000;
+      border: 1px solid rgba(0,0,0,.18);
+      aspect-ratio: 9 / 16; /* 竖视频更像海报内嵌；要横屏可改 16/9 */
+      position: relative;
+    }
+    .videoShell iframe{
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+    .videoLabel{
+      position:absolute;
+      top:10px; left:10px;
+      background: rgba(255,255,255,.85);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: #111;
+      backdrop-filter: blur(6px);
+    }
+
+    .footer{
+      text-align:center;
+      color: rgba(0,0,0,.45);
+      font-size: 12px;
+      padding: 10px 0 2px;
+    }
+    a{color:inherit}
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="paper">
+
+      <section class="top">
+        <div class="kicker">快乐生活 · “膝膝”相关</div>
+        <h1>练出“强壮膝”</h1>
+        <p class="sub">走起，巩固天然护膝。大腿一有劲，膝盖就安心。</p>
+        <div class="divider"></div>
+      </section>
+
+      <section class="block">
+        <h2>核心观点</h2>
+        <p>前后平衡，下肢更稳；减震、省力、更安全。前后都要练，膝盖才不“闹脾气”。</p>
+      </section>
+
+      <!-- ✅ 这里就是“留给视频”的地方 -->
+      <section class="videoShell" aria-label="视频展示区">
+        <div class="videoLabel">视频示范</div>
+
+        <!-- 换成你的视频链接（下面给你几个例子） -->
+        <!-- YouTube: https://www.youtube.com/embed/VIDEO_ID -->
+        <!-- Vimeo:   https://player.vimeo.com/video/VIDEO_ID -->
+        <!-- B站:     https://player.bilibili.com/player.html?bvid=BVxxxxxx&autoplay=0 -->
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="视频示范"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </section>
+
+      <section class="block">
+        <h2>妙招一 —— 减重</h2>
+        <p>体重越重，膝盖越累。可以先从减掉 5% 开始。</p>
+      </section>
+
+      <section class="block">
+        <h2>妙招二 —— 拉伸</h2>
+        <p>肌肉容易紧，适度拉伸来帮你。睡前拉伸 40–60 秒。</p>
+      </section>
+
+      <section class="block">
+        <h2>妙招三 —— 冷热敷</h2>
+        <p>酸紧僵：热敷；红肿热：冷敷。每次 10–15 分钟。</p>
+      </section>
+
+      <div class="footer">
+        Powered by GitHub Pages · <a href="#top">返回顶部</a>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
